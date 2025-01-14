@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SSN HELPDESK</title>
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: url('{{ url_for('static', filename='hpbg.jpg') }}') no-repeat center center fixed;
+                background-size:cover;
+                height: 100vh;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .wrapper {
+                max-width: 800px;
+                border-radius: 10px;
+                margin: 50px auto;
+                padding: 30px 40px;
+                background: #fff;
+                box-shadow: 20px 20px 80px rgb(206, 206, 206);
+            }
+
+            .h1 {
+                font-family: 'Kaushan Script', cursive;
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: #400485;
+                font-style: italic;
+            }
+
+            .h2, .h4 {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .steps {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+                color: #333;
+            }
+
+     
+
+            .button {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .btn-custom {
+                margin: 5px;
+                border-radius: 20px;
+                background-color: #400485;
+                color: #fff;
+            }
+
+            .btn-custom:hover {
+                background-color: #55268be0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="text-center">
+                <h1 class="h1">WELCOME TO SSN HELPDESK</h1>
+            </div>
+            <p class="steps">Welcome to the Campus Helpdesk, your one-stop destination for resolving all campus-related issues promptly and efficiently. From WiFi connectivity to electrical glitches, plumbing emergencies, and more, we're here to ensure a seamless experience for all members of our campus community.</p>
+            <h2 class="h2">STEPS FOR LOGGING A PROBLEM:</h2>
+            <ol class="steps">
+                <li>Click open new ticket</li>
+                <li>Sign in using your credentials</li>
+                <li>Select appropriate help topic</li>
+                <li>Fill in the mandatory fields</li>
+                <li>Click create ticket</li>
+            </ol>
+            
+            <div class="button">
+                <a class="btn btn-custom" href="{{ url_for('admin_login')}}">Admin-login</a>
+                <a class="btn btn-custom" href="{{ url_for('signin')}}">Client-login</a>
+                <a class="btn btn-custom" href="{{ url_for('agent_login')}}">Technician-login</a>
+            </div>
+        </div>
+        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    </body>
+</html>

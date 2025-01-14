@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Tickets</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content:center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 3.5rem;
+            color: #400485;
+            font-style: italic;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            border: 5px solid #400485;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 18px;
+            color: #400485;
+            border: 2px solid #400485;
+        }
+        th {
+            background-color: #400485;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 18px;
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto 0; /* Center the container and add margin at the top */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh; /* Limit the height of the container */
+            
+            box-sizing: border-box;
+            
+        }
+        .table-container {
+            width: 100%;
+            height: 100%; /* Ensure it fills the available space */
+            overflow-y: auto; /* Enable vertical scrolling */
+            flex-grow: 1;}
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Plumbing Tickets</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Help Topic</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Room No</th>
+                <th>Mobile No</th>
+                <th>Preferred Time</th>
+                <th>Ticket ID</th>
+                <th>User Email</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+            <tr>
+                <td>{{ entry.help_topic }}</td>
+                <td>{{ entry.description }}</td>
+                <td>{{ entry.location }}</td>
+                <td>{{ entry.room_no }}</td>
+                <td>{{ entry.mob_no }}</td>
+                <td>{{ entry.preferred_time }}</td>
+                <td>{{ entry['ticket id'] }}</td>
+                <td>{{ entry['user-email'] }}</td>
+                <td>
+                    <select onchange="updateTicketStatus('{{ entry['ticket id'] }}', '{{ entry.help_topic }}', this)">
+                        <option value="" disabled selected>Select</option>
+                        <option value="open" {% if entry.status == 'open' %}selected{% endif %}>Open</option>
+                        <option value="in_progress" {% if entry.status == 'in_progress' %}selected{% endif %}>In Progress</option>
+                        <option value="resolved" {% if entry.status == 'resolved' %}selected{% endif %}>Resolved</option>
+                    </select>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+    <script>
+        function updateTicketStatus(ticketId, helpTopic, selectElement) {
+            const status = selectElement.value;
+
+            fetch('/update_ticket_status', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ticket_id: ticketId, status: status, help_topic: helpTopic })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && status === 'resolved') {
+                    const row = selectElement.closest('tr');
+                    row.parentNode.removeChild(row);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+

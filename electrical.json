@@ -1,0 +1,24 @@
+[
+    {
+        "help_topic": "electrical",
+        "description": "fan not working",
+        "location": "ladies_hostel",
+        "room_no": "e44",
+        "mob_no": "9095804444",
+        "preferred_time": "19:21",
+        "ticket id": 601360,
+        "user-email": "anandhalaxmi2310810@ssn.edu.in",
+        "status": "open"
+    },
+    {
+        "help_topic": "electrical",
+        "description": "working speed of fan is slow",
+        "location": "ladies_hostel",
+        "room_no": "f-90",
+        "mob_no": "7676766620",
+        "preferred_time": "19:34",
+        "ticket id": 394390,
+        "user-email": "prarthna2310607@ssn.edu.in",
+        "status": "open"
+    }
+]

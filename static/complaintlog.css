@@ -1,0 +1,82 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat; /* Gradient background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 30%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Rounded shape for the container */
+}
+
+h1 {
+  text-align: center;
+  color: #400485; /* Heading color */
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 28px;
+  color: #400485; /* Heading color */
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #400485; /* Label color */
+}
+
+input[type="text"],
+textarea,
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif; /* Font style */
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  width: calc(100% - 40px);
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 30px;
+  background-color: #400485; /* Button color */
+  color: white;
+  font-family: 'Poppins', sans-serif; /* Font style */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #5714dc; /* Hover color */
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}

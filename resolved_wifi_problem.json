@@ -1,0 +1,34 @@
+[
+    {
+        "help_topic": "wifi_problem",
+        "description": "wifi not working",
+        "location": "gents_hostel",
+        "room_no": "e-44",
+        "mob_no": "7904548485",
+        "preferred_time": "7:00pm",
+        "ticket id": 720183,
+        "status": "resolved"
+    },
+    {
+        "help_topic": "wifi_problem",
+        "description": "ghjk",
+        "location": "gents_hostel",
+        "room_no": "cs-202",
+        "mob_no": "9344246599",
+        "preferred_time": "10:12",
+        "ticket id": 675042,
+        "user-email": "dharanikaran2310582@ssn.edu.in",
+        "status": "resolved"
+    },
+    {
+        "help_topic": "wifi_problem",
+        "description": "wifi not working",
+        "location": "gents_hostel",
+        "room_no": "E-44",
+        "mob_no": "9095804444",
+        "preferred_time": "11:42",
+        "ticket id": 764455,
+        "user-email": "dharanikaran2310582@ssn.edu.in",
+        "status": "resolved"
+    }
+]

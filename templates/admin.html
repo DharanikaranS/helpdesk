@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 200vh;
+            overflow: hidden;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 24px; /* Adjusted font size to match the first page */
+            color:#400485; /* Adjusted color to match the first page */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 5px solid #400485; 
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Matched font-family to the first page */
+            font-size: 18px;
+            color: #400485; /* Adjusted color to match the first page */
+        }
+        th {
+            background-color: #400485; /* Adjusted background color to match the first page */
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-height: 80vh; /* Limit the height of the container */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        a{
+            text-decoration: none;
+            color: #400485;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Client Feedback Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Rating</th>
+                    <th>Feedback</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feedback in feedback_data %}
+                <tr>
+                    <td>{{ feedback.ticket_id }}</td>
+                    <td>{{ feedback.rating }}</td>
+                    <td>{{ feedback.feedback }}</td>
+                    <td><a href="{{ url_for('ticket_details', ticket_id=feedback.ticket_id) }}" class="details-button">Ticket Details</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
+

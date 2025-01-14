@@ -1,0 +1,37 @@
+[
+    {
+        "help_topic":"plumbing",
+        "designation": "plumber",
+        "email": "plumber@agent.com",
+        "role": "agent",
+        "password": "plumber"
+    },
+    {
+        "help_topic":"civil-mason",
+        "designation": "mason",
+        "email": "mason@agent.com",
+        "role": "agent",
+        "password": "mason"
+    },
+    {
+        "help_topic":"carpentery",
+        "designation": "carpenter",
+        "role": "agent",
+        "email": "carpenter@agent.com",
+        "password": "carpenter"
+    },
+    {
+        "help_topic":"electrical",
+        "designation": "Electrician",
+        "email": "Electrician@agent.com",
+        "password": "electrician",
+        "role": "agent"
+    },
+    {
+        "help_topic":"wifi_problem",
+        "designation": "Internetprovider",
+        "role": "agent",
+        "email": "Internetprovider@agent.com",
+        "password": "internet"
+    }
+]

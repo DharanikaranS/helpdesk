@@ -1,0 +1,69 @@
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#400485;
+}
+p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ol{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.img{
+    position: absolute;
+    top: 170px;
+    right: 115px;
+    
+
+}
+.button {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+
+.client-login{
+    background-color: #400485; /* Green color for check status button */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.agent-login {
+    background-color: #400485; /* Green color for check status button */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.admin-login{
+    background-color: #400485; /* Green color for check status button */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+a{
+    text-decoration: none;
+}

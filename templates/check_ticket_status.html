@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Ticket Status</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 28px;
+            color: #400485;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px; /* Adjusted padding to create ellipse shape */
+            margin: 10px; /* Added margin for spacing between buttons */
+            border: none;
+            border-radius: 30px; /* Adjusted border-radius to create ellipse shape */
+            font-family: 'Poppins', sans-serif; /* Using Poppins font for buttons */
+            font-size: 18px; /* Adjusted font size */
+            color: white;
+            background-color: #400485;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #4510b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Check Ticket Status</h2>
+        <input type="text" id="ticket_id" placeholder="Enter Ticket ID" />
+        <button class="btn" onclick="checkStatus()">Check Status</button>
+    </div>
+    <script>
+        function checkStatus() {
+            const ticketId = document.getElementById('ticket_id').value;
+            if (ticketId) {
+                window.location.href = `/ticket_status/${ticketId}`;
+            }
+        }
+    </script>
+</body>
+</html>

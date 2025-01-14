@@ -1,0 +1,110 @@
+[
+    {
+        "fullname": "Dharanikaran S",
+        "email": "dharanikaran2310582@ssn.edu.in",
+        "role": "client",
+        "password": "Dharani27#"
+    },
+    {
+        "fullname": "SOWKANDHA RAGHAV G",
+        "email": "sowkandharaghav2310623@ssn.edu.in",
+        "password": "3nrnNpQT",
+        "role": "client"
+    },
+    {
+        "fullname": "CHENNAKESAVAN",
+        "email": "chennakesavan2310656@ssn.edu.in",
+        "role": "client",
+        "password": "123"
+    },
+    {
+        "fullname": "chiranjeevprasannaa",
+        "email": "v.v.chiranjeevprassannaa@gmail.com",
+        "role": "client",
+        "password": "12345678"
+    },
+    {
+        "fullname": "chiranjeev",
+        "email": "chiranjeevprasannaa@gmail.com",
+        "role": "client",
+        "password": "12345678"
+    },
+    {
+        "fullname": "RAGHAV",
+        "email": "sowkandharaghav2310623@ssn.edu.in",
+        "role": "client",
+        "password": "3nrnNpQT"
+    },
+    {
+        "fullname": "Anandha laxmi",
+        "email": "anandhalaxmi2310810@ssn.edu.in",
+        "role": "client",
+        "password": "123"
+    },
+    {
+        "fullname": "Anandha",
+        "email": "me.anandhalaxmi@gmail.com",
+        "role": "client",
+        "password": "098"
+    },
+    {
+        "fullname": "Aaftab",
+        "email": "aaftab2310309@ssn.edu.in",
+        "role": "client",
+        "password": "12345678"
+    },
+    {
+        "fullname": "Dharanikaran",
+        "email": "dharanikaran2310582@ssn.edu.in",
+        "role": "client",
+        "password": "dharani."
+    },
+    {
+        "fullname": "gobi",
+        "email": "gobi@gmail.com",
+        "password": "678",
+        "role": "client"
+    },
+    {
+        "fullname": "Suganya",
+        "email": "suganyasenthilvelavan.ss@gmail.com",
+        "password": "amma",
+        "role": "client"
+    },
+    {
+        "fullname": "gouthaman",
+        "email": "gouthamanvenkatesan@gmail.com",
+        "password": "Goutham",
+        "role": "client"
+    },
+    {
+        "fullname": "prarthna",
+        "email": "prarthna2310607@ssn.edu.in",
+        "password": "123",
+        "role": "client"
+    },
+    {
+        "fullname": "Dharani",
+        "email": "dharaniedu27@gmail.com",
+        "password": "270605",
+        "role": "client"
+    },
+    {
+        "fullname": "dhiva karan",
+        "email": "dhivakaran2310850@ssn.edu.in",
+        "password": "123",
+        "role": "client"
+    },
+    {
+        "fullname": "BALAJI M",
+        "email": "balajithegreat8303@gmail.com",
+        "password": "Balaji2006#",
+        "role": "client"
+    },
+    {
+        "fullname": "Hari",
+        "email": "harikaran2310104@ssn.edu.in",
+        "password": "hari2004",
+        "role": "client"
+    }
+]

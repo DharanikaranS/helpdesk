@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Log Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='complaintlog.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&display=swap">
+</head>
+<body>
+    <h1>Welcome {{ name }}!</h1>
+    <center><p>Feel free to log a complaint. Your concerns matter to us, and we strive to resolve them as quickly as possible.</p></center>
+    <div class="container">
+        <center><h3>Complaint Log Page</h3></center>
+        <form id="complaint-form">
+            <label for="help_topic" class="label">Help Topic:</label>
+            <select id="help_topic" name="help_topic" required>
+                <option value="electrical">Electrical</option>
+                <option value="carpentery">Carpentery</option>
+                <option value="civil_mason">Civil Mason</option>
+                <option value="wifi_problem">WiFi Problem</option>
+                <option value="plumbing">Plumbing</option>
+            </select>
+            <br><br>
+
+            <label for="description" class="label">Description of Issue:</label>
+            <textarea id="description" name="description" required></textarea>
+            <br><br>
+
+            <label for="location" class="label">Location:</label>
+            <select id="location" name="location" required>
+                <option value="department">Department</option>
+                <option value="ladies_hostel">Ladies Hostel</option>
+                <option value="gents_hostel">Gents Hostel</option>
+            </select>
+            <br><br>
+
+            <label for="room_no" class="label">Room No:</label>
+            <input type="text" id="room_no" name="room_no" required>
+            <br><br>
+
+            <label for="mob_no" class="label">Mobile No:</label>
+            <input type="text" id="mob_no" name="mob_no" required>
+            <br><br>
+
+            <label for="preferred_time" class="label">Preferred Time:</label>
+            <input type="time" id="preferred_time" name="preferred_time" required>
+            <br><br>
+
+            <center><button type="submit">Create Ticket</button></center>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='complaintlog.js') }}"></script>
+</body>
+</html>
+
